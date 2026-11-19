@@ -373,3 +373,226 @@ button:disabled {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* =================================
+   ANNIVERSARY SCRAPBOOK LETTER
+================================= */
+
+#letter-screen {
+  padding: 45px 18px;
+  background:
+    radial-gradient(#eadbd5 0.8px, transparent 0.8px);
+  background-size: 22px 22px;
+}
+
+.scrapbook {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.letter-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.small-heading {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #a77d80;
+  font-weight: 600;
+}
+
+.letter-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 6vw, 48px);
+  color: #684c50;
+  margin: 12px 0;
+}
+
+.handwritten {
+  font-family: "Caveat", cursive;
+  font-size: 25px;
+  color: #b17b84;
+}
+
+.letter-paper {
+  position: relative;
+  background: #fffdf8;
+  padding: clamp(25px, 6vw, 65px);
+  border: 1px solid #eee4dc;
+  box-shadow: 0 12px 35px rgba(100, 65, 65, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.letter-paper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25px;
+  right: 25px;
+  height: 5px;
+  background: #e9bfc2;
+}
+
+.letter-paper > h2 {
+  font-family: "Playfair Display", serif;
+  color: #77565b;
+  font-size: 29px;
+  margin-bottom: 20px;
+}
+
+.letter-paper p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #554b49;
+  margin-bottom: 22px;
+}
+
+.reasons-heading {
+  font-family: "Caveat", cursive;
+  font-size: 38px;
+  text-align: center;
+  color: #b17b84;
+  margin: 40px 0 30px;
+}
+
+.reason {
+  position: relative;
+  margin: 32px 0;
+  padding: 18px 20px 18px 28px;
+  border-left: 3px solid #e8c2c5;
+  background: #fff9f6;
+}
+
+.reason-number {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #b17b84;
+  margin-bottom: 7px;
+}
+
+.reason h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+  color: #77565b;
+  margin: 0 0 10px;
+}
+
+.reason p {
+  margin-bottom: 0;
+}
+
+/* POLAROID PHOTOS */
+
+.polaroid {
+  width: 230px;
+  max-width: 75%;
+  padding: 10px 10px 18px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(70, 45, 45, 0.16);
+  margin: 35px auto;
+  transform: rotate(-2deg);
+}
+
+.polaroid img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.polaroid figcaption {
+  font-family: "Caveat", cursive;
+  text-align: center;
+  font-size: 23px;
+  color: #80646a;
+  padding-top: 8px;
+}
+
+.photo-left {
+  margin-left: 5%;
+  transform: rotate(-4deg);
+}
+
+.photo-right {
+  margin-right: 5%;
+  transform: rotate(3deg);
+}
+
+.photo-center {
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotate(-1deg);
+}
+
+/* FINAL MESSAGE */
+
+.final-message {
+  margin-top: 45px;
+  padding: 25px;
+  background: #fbefef;
+  border-radius: 4px;
+  border: 1px dashed #d7aeb2;
+}
+
+.final-message p {
+  margin-bottom: 0;
+}
+
+.letter-signature {
+  margin-top: 35px;
+  text-align: right;
+}
+
+.letter-signature p {
+  margin-bottom: 5px;
+}
+
+.signature {
+  font-family: "Caveat", cursive !important;
+  font-size: 34px !important;
+  color: #a66e78 !important;
+}
+
+.little-heart {
+  text-align: center;
+  color: #d99ca5;
+  font-size: 30px;
+  margin-top: 35px;
+}
+
+/* MOBILE LAYOUT */
+
+@media (max-width: 600px) {
+  #letter-screen {
+    padding: 25px 12px;
+  }
+
+  .letter-paper {
+    padding: 30px 20px;
+  }
+
+  .reason {
+    padding: 15px;
+  }
+
+  .polaroid {
+    width: 195px;
+  }
+
+  .polaroid img {
+    height: 195px;
+  }
+
+  .photo-left {
+    margin-left: 0;
+  }
+
+  .photo-right {
+    margin-right: 0;
+  }
+}
