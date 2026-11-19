@@ -1,36 +1,42 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const correctPassword = "May20";
+  const correctPassword = "May 20";
 
   const passwordInput = document.getElementById("password");
   const unlockButton = document.getElementById("unlock-button");
   const passwordScreen = document.getElementById("password-screen");
   const letterScreen = document.getElementById("letter-screen");
   const errorMessage = document.getElementById("error-message");
-
-  console.log("Anniversary website JavaScript loaded!");
+  const envelope = document.querySelector(".envelope");
 
   unlockButton.addEventListener("click", function () {
-
-    console.log("Unlock button clicked!");
 
     const enteredPassword = passwordInput.value.trim();
 
     if (enteredPassword === correctPassword) {
 
-      console.log("Correct password!");
-
       errorMessage.textContent = "";
+      unlockButton.disabled = true;
+      unlockButton.textContent = "Opening your letter...";
 
-      passwordScreen.classList.add("hidden");
-      letterScreen.classList.remove("hidden");
+      // Start envelope opening animation
+      envelope.classList.add("opening");
 
-      window.scrollTo(0, 0);
+      // Reveal the letter after the animation
+      setTimeout(function () {
+
+        passwordScreen.classList.add("hidden");
+        letterScreen.classList.remove("hidden");
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      }, 1000);
 
     } else {
-
-      console.log("Incorrect password!");
 
       errorMessage.textContent = "Not quite! Try again, my love ♡";
       passwordInput.value = "";
