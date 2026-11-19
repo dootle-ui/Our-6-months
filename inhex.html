@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Something for Grace</title>
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="page">
+
+    <!-- PASSWORD / ENVELOPE SCREEN -->
+    <section id="password-screen" class="screen">
+      <p class="small-heading">NOVEMBER 20 · OUR SPECIAL DAY</p>
+
+      <h1>A little something<br>for Grace</h1>
+
+      <p class="subtitle">
+        I've made something just for you.
+      </p>
+
+      <div class="envelope">
+        <div class="envelope-back"></div>
+        <div class="envelope-front"></div>
+
+        <div class="envelope-letter">
+          <span>For Grace,</span>
+          <span>With love ♡</span>
+        </div>
+
+        <div class="envelope-flap"></div>
+
+        <div class="heart-seal">♥</div>
+      </div>
+
+      <form id="password-form">
+        <label for="password">A little secret before you open it...</label>
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter the password"
+          autocomplete="off"
+          required
+        >
+
+        <p class="hint">Hint: The day we became official.</p>
+
+        <button type="submit">Open your letter ♡</button>
+
+        <p id="error-message" class="error-message"></p>
+      </form>
+    </section>
+
+    <!-- ANNIVERSARY LETTER SCREEN -->
+    <section id="letter-screen" class="screen hidden">
+      <p class="small-heading">TO MY FAVORITE PERSON</p>
+      <h1>Happy Anniversary, Grace ♡</h1>
+
+      <div class="letter-content">
+        <p>My dearest Grace,</p>
+
+        <p>
+          I made this little corner of the internet just for you.
+          There's so much I want to tell you, and I can't wait
+          to share it with you here.
+        </p>
+
+        <p>With all my love,</p>
+        <p>Yours ♡</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
