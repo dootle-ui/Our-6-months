@@ -1,36 +1,49 @@
 
-const correctPassword = "5/20";
+document.addEventListener("DOMContentLoaded", function () {
 
-const passwordInput = document.getElementById("password");
-const unlockButton = document.getElementById("unlock-button");
-const passwordScreen = document.getElementById("password-screen");
-const letterScreen = document.getElementById("letter-screen");
-const errorMessage = document.getElementById("error-message");
+  const correctPassword = "5/20";
 
-function openLetter() {
-  const enteredPassword = passwordInput.value.trim();
+  const passwordInput = document.getElementById("password");
+  const unlockButton = document.getElementById("unlock-button");
+  const passwordScreen = document.getElementById("password-screen");
+  const letterScreen = document.getElementById("letter-screen");
+  const errorMessage = document.getElementById("error-message");
 
-  if (enteredPassword === correctPassword) {
-    errorMessage.textContent = "";
+  console.log("Anniversary website JavaScript loaded!");
 
-    passwordScreen.classList.add("hidden");
-    letterScreen.classList.remove("hidden");
+  unlockButton.addEventListener("click", function () {
 
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  } else {
-    errorMessage.textContent = "Not quite! Try again, my love ♡";
-    passwordInput.value = "";
-    passwordInput.focus();
-  }
-}
+    console.log("Unlock button clicked!");
 
-unlockButton.addEventListener("click", openLetter);
+    const enteredPassword = passwordInput.value.trim();
 
-passwordInput.addEventListener("keydown", function(event) {
-  if (event.key === "Enter") {
-    openLetter();
-  }
+    if (enteredPassword === correctPassword) {
+
+      console.log("Correct password!");
+
+      errorMessage.textContent = "";
+
+      passwordScreen.classList.add("hidden");
+      letterScreen.classList.remove("hidden");
+
+      window.scrollTo(0, 0);
+
+    } else {
+
+      console.log("Incorrect password!");
+
+      errorMessage.textContent = "Not quite! Try again, my love ♡";
+      passwordInput.value = "";
+      passwordInput.focus();
+
+    }
+
+  });
+
+  passwordInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      unlockButton.click();
+    }
+  });
+
 });
