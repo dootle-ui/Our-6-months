@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const correctPassword = "5/20";
+  const correctPassword = "May20";
 
   const passwordInput = document.getElementById("password");
   const unlockButton = document.getElementById("unlock-button");
